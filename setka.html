@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Centered Canvas</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center; /* Горизонтально */
+        align-items: center; /* Вертикально */
+        height: 100vh; /* Высота окна браузера */
+        background-color: #f0f0f0;
+      }
+
+      canvas {
+        border: 5px solid black;
+        background-color: white;
+      }
+      dialog {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      }
+      div {
+        display: flex;
+        flex-direction: row;
+        column-gap: 10px;
+      }
+      button {
+        background-color: blue;
+        border: none;
+        border-radius: 5px;
+        color: white;
+      }
+      dialog:not([open]) {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <dialog id="modal">
+      <div>
+        <label for="">A</label>
+        <input type="number" placeholder="x" name="" id="x1" />
+        <input type="number" placeholder="y" name="" id="y1" />
+      </div>
+      <div>
+        <label for="">B</label>
+        <input type="number" placeholder="x" name="" id="x2" />
+        <input type="number" placeholder="y" name="" id="y2" />
+      </div>
+      <div>
+        <label for="">C</label>
+        <input type="number" placeholder="x" name="" id="x3" />
+        <input type="number" placeholder="y" name="" id="y3" />
+      </div>
+      <div>
+        <button id="closeModal">Закрыть</button>
+        <button id="button">Отрпавить</button>
+      </div>
+    </dialog>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="setka.js"></script>
+  </body>
+</html>
