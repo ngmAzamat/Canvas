@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <title>Centered Canvas</title>
     <style>
+      @media (orientation: portrait) {
+        /* Высота больше ширины */
+      }
+
+      @media (orientation: landscape) {
+        /* Ширина больше высоты */
+      }
       body {
         margin: 0;
         display: flex;
@@ -43,6 +50,7 @@
     </style>
   </head>
   <body>
+    <button id="mobile">Создать Треугольник</button>
     <dialog id="modal">
       <div>
         <label for="">A</label>
