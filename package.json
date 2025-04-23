@@ -1,0 +1,17 @@
+{
+  "name": "canvas",
+  "module": "src/index.ts",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "bunx --bun tsup",
+    "watch": "bunx --bun tsup --watch"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "tsup": "^8.4.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
