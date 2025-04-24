@@ -43,14 +43,26 @@
         border: none;
         border-radius: 5px;
         color: white;
+        padding: 20px;
       }
       dialog:not([open]) {
         display: none;
+      }
+      #mobile {
+        position: absolute;
+        left: 40%;
+        top: 100px;
+      }
+      #mobile2 {
+        position: absolute;
+        left: 60%;
+        top: 100px;
       }
     </style>
   </head>
   <body>
     <button id="mobile">Создать Треугольник</button>
+    <button id="mobile2">Создать Четырехугольник</button>
     <dialog id="modal">
       <div>
         <label for="">A</label>
@@ -69,7 +81,21 @@
       </div>
       <div>
         <button id="closeModal">Закрыть</button>
-        <button id="button">Отрпавить</button>
+        <button id="button">Отправить</button>
+      </div>
+    </dialog>
+    <dialog id="modal2">
+      <div>
+        <input type="number" placeholder="x" name="" id="x" />
+        <input type="number" placeholder="y" name="" id="y" />
+      </div>
+      <div>
+        <input type="number" placeholder="height" name="" id="height" />
+        <input type="number" placeholder="width" name="" id="width" />
+      </div>
+      <div>
+        <button id="closeModal2">Закрыть</button>
+        <button id="button2">Отправить</button>
       </div>
     </dialog>
 
