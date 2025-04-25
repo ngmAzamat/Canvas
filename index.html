@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Centered Canvas</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <style>
       @media (orientation: portrait) {
         /* Высота больше ширины */
@@ -33,6 +37,10 @@
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
       }
+      div button {
+        font-size: 16px;
+        width: 100%;
+      }
       div {
         display: flex;
         flex-direction: row;
@@ -40,6 +48,7 @@
       }
       button {
         background-color: blue;
+        font-size: 20px;
         border: none;
         border-radius: 5px;
         color: white;
@@ -48,21 +57,66 @@
       dialog:not([open]) {
         display: none;
       }
+
       #mobile {
+        position: absolute;
+        left: 20%;
+        top: 100px;
+      }
+      input {
+        background-color: white;
+        border: 1px solid black;
+        outline: none;
+        padding: 5px;
+        border-radius: 1px;
+        width: auto;
+      }
+      input[type="color"] {
+        width: 100%;
+      }
+      input#linewidth {
+        width: 100%;
+      }
+      input#linewidth2 {
+        width: 100%;
+      }
+
+      #mobile2 {
         position: absolute;
         left: 40%;
         top: 100px;
       }
-      #mobile2 {
+      #mobile3 {
         position: absolute;
         left: 60%;
         top: 100px;
       }
+      #mobile3 > div > input {
+        width: 50%;
+      }
+      #mobile3 > div > input {
+        width: 50%;
+      }
+      input[type="text"] {
+        width: 100%;
+      }
+      label {
+        width: 100%;
+
+        text-wrap: none;
+      }
     </style>
   </head>
   <body>
-    <button id="mobile">Создать Треугольник</button>
-    <button id="mobile2">Создать Четырехугольник</button>
+    <button title="создать треугольник" id="mobile">
+      <i class="bx bx-shape-triangle"></i>
+    </button>
+    <button title="создать прямоугольник" id="mobile2">
+      <i class="bx bxs-rectangle"></i>
+    </button>
+    <button title="создать текст" id="mobile3">
+      <i class="bx bx-text"></i>
+    </button>
     <dialog id="modal">
       <div>
         <label for="">A</label>
@@ -80,6 +134,17 @@
         <input type="number" placeholder="y" name="" id="y3" />
       </div>
       <div>
+        <label for="">border color</label>
+        <input type="color" placeholder="border" name="" id="border" />
+      </div>
+      <div>
+        <label for="">background color</label>
+        <input type="color" placeholder="background" name="" id="background" />
+      </div>
+      <div>
+        <input type="number" placeholder="line width" name="" id="linewidth" />
+      </div>
+      <div>
         <button id="closeModal">Закрыть</button>
         <button id="button">Отправить</button>
       </div>
@@ -90,12 +155,40 @@
         <input type="number" placeholder="y" name="" id="y" />
       </div>
       <div>
-        <input type="number" placeholder="height" name="" id="height" />
-        <input type="number" placeholder="width" name="" id="width" />
+        <input type="number" placeholder="height" name="" id="height2" />
+        <input type="number" placeholder="width" name="" id="width2" />
+      </div>
+      <div>
+        <label for="">border color</label>
+        <input type="color" placeholder="border" name="" id="border2" />
+      </div>
+      <div>
+        <label for="">background color</label>
+        <input type="color" placeholder="background" name="" id="background2" />
+      </div>
+      <div>
+        <input type="number" placeholder="line width" name="" id="linewidth2" />
       </div>
       <div>
         <button id="closeModal2">Закрыть</button>
         <button id="button2">Отправить</button>
+      </div>
+    </dialog>
+    <dialog id="modal3">
+      <div>
+        <input type="number" placeholder="x" name="" id="newx" />
+        <input type="number" placeholder="y" name="" id="newy" />
+      </div>
+      <div>
+        <input type="text" placeholder="text" name="" id="text" />
+      </div>
+      <div>
+        <label for="">color</label>
+        <input type="color" placeholder="color" name="" id="color" />
+      </div>
+      <div>
+        <button id="closeModal3">Закрыть</button>
+        <button id="button3">Отправить</button>
       </div>
     </dialog>
 

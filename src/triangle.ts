@@ -6,33 +6,23 @@ export function triangle(
   x3: number,
   y3: number,
   canvas: any,
-  context: any
+  context: any,
+  border: any,
+  background: any,
+  lineWidth: number
 ) {
   let newY1 = y1 * -1 + canvas.height;
   let newY2 = y2 * -1 + canvas.height;
   let newY3 = y3 * -1 + canvas.height;
   context.beginPath();
-  context.strokeStyle = "red";
-  context.lineWidth = "5";
+  context.strokeStyle = border;
+  context.lineWidth = lineWidth;
   context.moveTo(x1, newY1);
   context.lineTo(x2, newY2);
   context.lineTo(x3, newY3);
   context.lineTo(x1, newY1);
   context.closePath();
+  context.fillStyle = background;
   context.stroke();
+  context.fill();
 }
-
-// export function triangle(x1, y1, x2, y2, x3, y3, canvas, context) {
-//   let newY1 = y1 * -1 + canvas.height;
-//   let newY2 = y2 * -1 + canvas.height;
-//   let newY3 = y3 * -1 + canvas.height;
-//   context.beginPath();
-//   context.strokeStyle = "red";
-//   context.lineWidth = "5";
-//   context.moveTo(x1, newY1);
-//   context.lineTo(x2, newY2);
-//   context.lineTo(x3, newY3);
-//   context.lineTo(x1, newY1);
-//   context.closePath();
-//   context.stroke();
-// }
