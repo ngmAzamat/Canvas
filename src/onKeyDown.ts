@@ -1,10 +1,10 @@
 import { triangle } from "./triangle.ts";
 import { rectangle } from "./rectangle.ts";
-import { text } from "./text.ts";
+import { texted } from "./text.ts";
 
 let modal: any = document.getElementById("modal");
-const canvas: any = document.querySelector("canvas");
-let context = canvas.getContext("2d");
+const canvas: HTMLCanvasElement = document.querySelector("canvas")!;
+let context: CanvasRenderingContext2D = canvas.getContext("2d")!;
 
 export function All(canvas: any, context: any) {
   document.addEventListener("keydown", onKeyDown);
@@ -93,9 +93,9 @@ z.addEventListener("click", () => {
   let y: number = a2.value;
   let width: number = a3.value;
   let height: number = a4.value;
-  let border: any = a5.value;
-  let background: any = a6.value;
-  let lineWidth: any = a7.value;
+  let border: string = a5.value;
+  let background: string = a6.value;
+  let lineWidth: number = a7.value;
   rectangle(
     x,
     y,
@@ -132,9 +132,9 @@ r.addEventListener("click", () => {
   let a4: any = document.getElementById("color");
   let x: number = a1.value;
   let y: number = a2.value;
-  let text: any = a3.value;
-  let color: any = a4.value;
+  let text: string = a3.value;
+  let color: string = a4.value;
   console.log("x");
-  text(x, y, text, canvas, context, color);
+  texted(x, y, text, canvas, context, color);
   console.log("z");
 });

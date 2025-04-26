@@ -5,10 +5,10 @@ export function triangle(
   y2: number,
   x3: number,
   y3: number,
-  canvas: any,
-  context: any,
-  border: any,
-  background: any,
+  canvas: HTMLCanvasElement,
+  context: CanvasRenderingContext2D,
+  border: string,
+  background: string,
   lineWidth: number
 ) {
   let newY1 = y1 * -1 + canvas.height;

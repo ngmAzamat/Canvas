@@ -3,10 +3,10 @@ export function rectangle(
   y: number,
   width: number,
   height: number,
-  canvas: any,
-  context: any,
-  border: any,
-  background: any,
+  canvas: HTMLCanvasElement,
+  context: CanvasRenderingContext2D,
+  border: string,
+  background: string,
   lineWidth: number
 ) {
   // Задаем цвет заливки

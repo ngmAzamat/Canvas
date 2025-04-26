@@ -1,12 +1,14 @@
-export function text(
+export function texted(
   x: number,
   y: number,
-  text: any,
-  canvas: any,
-  context: any,
-  color: any
+  text: string,
+  canvas: HTMLCanvasElement,
+  context: CanvasRenderingContext2D,
+  color: string
 ) {
+  let newX = x;
+  let newY = y * -1 + canvas.height;
   context.fillStyle = color;
   context.font = "16px Arial"; // Можно изменить на любой шрифт
-  context.fillText(text, x, y);
+  context.fillText(text, newX, newY);
 }
