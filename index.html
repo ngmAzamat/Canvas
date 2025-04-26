@@ -34,8 +34,9 @@
         row-gap: 10px;
         border: none;
         border-radius: 10px;
-        padding: 20px;
+        padding: 55px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        row-gap: 30px;
       }
       div button {
         font-size: 16px;
@@ -44,7 +45,7 @@
       div {
         display: flex;
         flex-direction: row;
-        column-gap: 10px;
+        column-gap: 30px;
       }
       button {
         background-color: blue;
@@ -58,17 +59,12 @@
         display: none;
       }
 
-      #mobile {
-        position: absolute;
-        left: 20%;
-        top: 100px;
-      }
       input {
         background-color: white;
         border: 1px solid black;
         outline: none;
-        padding: 5px;
-        border-radius: 1px;
+        padding: 10px;
+        border-radius: 2px;
         width: auto;
       }
       input[type="color"] {
@@ -80,16 +76,20 @@
       input#linewidth2 {
         width: 100%;
       }
+      .Osobi {
+        position: absolute;
+        top: 100px;
+        left: 900px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+      }
+      #mobile {
+      }
 
       #mobile2 {
-        position: absolute;
-        left: 40%;
-        top: 100px;
       }
       #mobile3 {
-        position: absolute;
-        left: 60%;
-        top: 100px;
       }
       #mobile3 > div > input {
         width: 50%;
@@ -108,15 +108,17 @@
     </style>
   </head>
   <body>
-    <button title="создать треугольник" id="mobile">
-      <i class="bx bx-shape-triangle"></i>
-    </button>
-    <button title="создать прямоугольник" id="mobile2">
-      <i class="bx bxs-rectangle"></i>
-    </button>
-    <button title="создать текст" id="mobile3">
-      <i class="bx bx-text"></i>
-    </button>
+    <div class="Osobi">
+      <button title="create triangle" id="mobile">
+        <i class="bx bx-shape-triangle"></i>
+      </button>
+      <button title="create rectangle" id="mobile2">
+        <i class="bx bxs-rectangle"></i>
+      </button>
+      <button title="create text" id="mobile3">
+        <i class="bx bx-text"></i>
+      </button>
+    </div>
     <dialog id="modal">
       <div>
         <label for="">A</label>
@@ -186,6 +188,16 @@
         <label for="">color</label>
         <input type="color" placeholder="color" name="" id="color" />
       </div>
+      <div>
+        <input
+          type="number"
+          placeholder="font-size in pixel"
+          name=""
+          id="fontSize"
+        />
+        <input type="text" placeholder="font family" name="" id="fontFamily" />
+      </div>
+
       <div>
         <button id="closeModal3">Закрыть</button>
         <button id="button3">Отправить</button>

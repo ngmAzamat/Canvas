@@ -50,7 +50,7 @@ b.addEventListener("click", () => {
   let border: any = a7.value;
   let background: any = a8.value;
   let lineWidth: any = a9.value;
-  triangle(
+  triangle({
     x1,
     y1,
     x2,
@@ -61,8 +61,8 @@ b.addEventListener("click", () => {
     context,
     border,
     background,
-    lineWidth
-  );
+    lineWidth,
+  });
 });
 
 let modal2: any = document.getElementById("modal2");
@@ -96,7 +96,7 @@ z.addEventListener("click", () => {
   let border: string = a5.value;
   let background: string = a6.value;
   let lineWidth: number = a7.value;
-  rectangle(
+  rectangle({
     x,
     y,
     width,
@@ -105,8 +105,8 @@ z.addEventListener("click", () => {
     context,
     border,
     background,
-    lineWidth
-  );
+    lineWidth,
+  });
 });
 
 let modal3: any = document.getElementById("modal3");
@@ -130,11 +130,15 @@ r.addEventListener("click", () => {
   let a2: any = document.getElementById("newy");
   let a3: any = document.getElementById("text");
   let a4: any = document.getElementById("color");
+  let a5: any = document.getElementById("fontSize");
+  let a6: any = document.getElementById("fontFamily");
   let x: number = a1.value;
   let y: number = a2.value;
   let text: string = a3.value;
   let color: string = a4.value;
+  let fontSize: number = a5.value;
+  let fontFamily: string = a6.value;
   console.log("x");
-  texted(x, y, text, canvas, context, color);
+  texted({ x, y, text, canvas, context, color, fontSize, fontFamily });
   console.log("z");
 });
