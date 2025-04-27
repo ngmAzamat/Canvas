@@ -29,7 +29,7 @@ a.addEventListener("click", () => {
   }
 });
 
-const b: HTMLElement = document.getElementById("button")!;
+const b = document.getElementById("button") as HTMLButtonElement;
 b.addEventListener("click", () => {
   const a1 = document.getElementById("x1") as HTMLInputElement;
   const a2 = document.getElementById("x2") as HTMLInputElement;
@@ -79,7 +79,7 @@ e.addEventListener("click", () => {
   }
 });
 
-const z = document.getElementById("button2") as HTMLElement;
+const z = document.getElementById("button2") as HTMLButtonElement;
 z.addEventListener("click", () => {
   console.log("a");
   const a1 = document.getElementById("x") as HTMLInputElement;
@@ -123,7 +123,7 @@ y2.addEventListener("click", () => {
   }
 });
 
-const r = document.getElementById("button3") as HTMLElement;
+const r = document.getElementById("button3") as HTMLButtonElement;
 r.addEventListener("click", () => {
   console.log("a");
   const a1 = document.getElementById("newx") as HTMLInputElement;

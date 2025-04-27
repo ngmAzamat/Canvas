@@ -14,9 +14,9 @@ type Triangle = {
 };
 
 export function triangle(t: Triangle) {
-  let newY1 = coordMathToCanvas(t.y1, t.canvas);
-  let newY2 = coordMathToCanvas(t.y2, t.canvas);
-  let newY3 = coordMathToCanvas(t.y3, t.canvas);
+  const newY1 = coordMathToCanvas(t.y1, t.canvas);
+  const newY2 = coordMathToCanvas(t.y2, t.canvas);
+  const newY3 = coordMathToCanvas(t.y3, t.canvas);
   t.context.beginPath();
   t.context.strokeStyle = t.border;
   t.context.lineWidth = t.lineWidth;

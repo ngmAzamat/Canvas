@@ -19,7 +19,7 @@ export function rectangle(t: Rectangle) {
   t.context.fillStyle = t.background;
 
   // Рисуем прямоугольник: (x, y, width, height)
-  let a = coordMathToCanvas(t.y, t.canvas);
+  const a = coordMathToCanvas(t.y, t.canvas);
   t.context.fillRect(t.x, a, t.width, t.height * -1);
   t.context.strokeRect(t.x, a, t.width, t.height * -1);
 }

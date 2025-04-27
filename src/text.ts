@@ -12,8 +12,8 @@ type Texted = {
 };
 
 export function texted(t: Texted) {
-  let newX = t.x;
-  let newY = coordMathToCanvas(t.y, t.canvas);
+  const newX = t.x;
+  const newY = coordMathToCanvas(t.y, t.canvas);
   t.context.fillStyle = t.color;
   // t.context.font = "16px Arial"; // Можно изменить на любой шрифт
   t.context.font = `${t.fontSize}px ${t.fontFamily}`;

@@ -11,9 +11,9 @@ export function drawGrid(
     context.stroke();
     context.fillStyle = "black"; // Цвет текста
     context.font = "16px Arial"; // Размер и шрифт
-    let a = i * 100 + 10;
-    let b = canvas.height - 5;
-    let c = a + b - canvas.height - 15 - 40 + 50 + "";
+    const a = i * 100 + 10;
+    const b = canvas.height - 5;
+    const c = a + b - canvas.height - 15 - 40 + 50 + "";
     context.fillText(c, a, b); // Текст, x, y
   }
 
@@ -26,10 +26,10 @@ export function drawGrid(
     context.stroke();
     context.fillStyle = "black"; // Цвет текста
     context.font = "16px Arial"; // Размер и шрифт
-    let a = 0 + 10;
-    let b = i * 100 + 30;
-    let d = canvas.height - b;
-    let c: string = a + b - 40 + 50 + "";
+    const a = 0 + 10;
+    const b = i * 100 + 30;
+    const d = canvas.height - b;
+    const c: string = a + b - 40 + 50 + "";
     context.fillText(c, a, d); // Текст, x, y
   }
 }
