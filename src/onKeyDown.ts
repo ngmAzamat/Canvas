@@ -2,13 +2,13 @@ import { triangle } from "./triangle.ts";
 import { rectangle } from "./rectangle.ts";
 import { texted } from "./text.ts";
 
-let modal: any = document.getElementById("modal");
+const modal = document.getElementById("modal") as HTMLDialogElement;
 const canvas: HTMLCanvasElement = document.querySelector("canvas")!;
-let context: CanvasRenderingContext2D = canvas.getContext("2d")!;
+const context: CanvasRenderingContext2D = canvas.getContext("2d")!;
 
-export function All(canvas: any, context: any) {
+export function All() {
   document.addEventListener("keydown", onKeyDown);
-  function onKeyDown(event: any) {
+  function onKeyDown(event: KeyboardEvent) {
     const isCtrlPressed = event.ctrlKey;
 
     if (isCtrlPressed && event.key === "m") {
@@ -22,34 +22,34 @@ c.addEventListener("click", () => {
   modal.showModal();
 });
 
-let a: any = document.getElementById("closeModal");
+const a: HTMLElement = document.getElementById("closeModal")!;
 a.addEventListener("click", () => {
   if (modal) {
     modal.close();
   }
 });
 
-let b: any = document.getElementById("button");
+const b: HTMLElement = document.getElementById("button")!;
 b.addEventListener("click", () => {
-  let a1: any = document.getElementById("x1");
-  let a2: any = document.getElementById("x2");
-  let a3: any = document.getElementById("x3");
-  let a4: any = document.getElementById("y1");
-  let a5: any = document.getElementById("y2");
-  let a6: any = document.getElementById("y3");
-  let a7: any = document.getElementById("border");
-  let a8: any = document.getElementById("background");
-  let a9: any = document.getElementById("linewidth");
+  const a1 = document.getElementById("x1") as HTMLInputElement;
+  const a2 = document.getElementById("x2") as HTMLInputElement;
+  const a3 = document.getElementById("x3") as HTMLInputElement;
+  const a4 = document.getElementById("y1") as HTMLInputElement;
+  const a5 = document.getElementById("y2") as HTMLInputElement;
+  const a6 = document.getElementById("y3") as HTMLInputElement;
+  const a7 = document.getElementById("border") as HTMLInputElement;
+  const a8 = document.getElementById("background") as HTMLInputElement;
+  const a9 = document.getElementById("linewidth") as HTMLInputElement;
 
-  let x1: number = a1.value;
-  let x2: number = a2.value;
-  let x3: number = a3.value;
-  let y1: number = a4.value;
-  let y2: number = a5.value;
-  let y3: number = a6.value;
-  let border: any = a7.value;
-  let background: any = a8.value;
-  let lineWidth: any = a9.value;
+  const x1: number = Number(a1.value);
+  const x2: number = Number(a2.value);
+  const x3: number = Number(a3.value);
+  const y1: number = Number(a4.value);
+  const y2: number = Number(a5.value);
+  const y3: number = Number(a6.value);
+  const border: string = a7.value;
+  const background: string = a8.value;
+  const lineWidth: number = Number(a9.value);
   triangle({
     x1,
     y1,
@@ -65,7 +65,7 @@ b.addEventListener("click", () => {
   });
 });
 
-let modal2: any = document.getElementById("modal2");
+const modal2 = document.getElementById("modal2") as HTMLDialogElement;
 
 const d = document.getElementById("mobile2") as HTMLElement;
 d.addEventListener("click", () => {
@@ -79,23 +79,23 @@ e.addEventListener("click", () => {
   }
 });
 
-let z = document.getElementById("button2") as HTMLElement;
+const z = document.getElementById("button2") as HTMLElement;
 z.addEventListener("click", () => {
   console.log("a");
-  let a1: any = document.getElementById("x");
-  let a2: any = document.getElementById("y");
-  let a3: any = document.getElementById("width2");
-  let a4: any = document.getElementById("height2");
-  let a5: any = document.getElementById("border2");
-  let a6: any = document.getElementById("background2");
-  let a7: any = document.getElementById("linewidth2");
-  let x: number = a1.value;
-  let y: number = a2.value;
-  let width: number = a3.value;
-  let height: number = a4.value;
-  let border: string = a5.value;
-  let background: string = a6.value;
-  let lineWidth: number = a7.value;
+  const a1 = document.getElementById("x") as HTMLInputElement;
+  const a2 = document.getElementById("y") as HTMLInputElement;
+  const a3 = document.getElementById("width2") as HTMLInputElement;
+  const a4 = document.getElementById("height2") as HTMLInputElement;
+  const a5 = document.getElementById("border2") as HTMLInputElement;
+  const a6 = document.getElementById("background2") as HTMLInputElement;
+  const a7 = document.getElementById("linewidth2") as HTMLInputElement;
+  const x: number = Number(a1.value);
+  const y: number = Number(a2.value);
+  const width: number = Number(a3.value);
+  const height: number = Number(a4.value);
+  const border: string = a5.value;
+  const background: string = a6.value;
+  const lineWidth: number = Number(a7.value);
   rectangle({
     x,
     y,
@@ -109,7 +109,7 @@ z.addEventListener("click", () => {
   });
 });
 
-let modal3: any = document.getElementById("modal3");
+const modal3 = document.getElementById("modal3") as HTMLDialogElement;
 
 const y1 = document.getElementById("mobile3") as HTMLElement;
 y1.addEventListener("click", () => {
@@ -123,21 +123,21 @@ y2.addEventListener("click", () => {
   }
 });
 
-let r = document.getElementById("button3") as HTMLElement;
+const r = document.getElementById("button3") as HTMLElement;
 r.addEventListener("click", () => {
   console.log("a");
-  let a1: any = document.getElementById("newx");
-  let a2: any = document.getElementById("newy");
-  let a3: any = document.getElementById("text");
-  let a4: any = document.getElementById("color");
-  let a5: any = document.getElementById("fontSize");
-  let a6: any = document.getElementById("fontFamily");
-  let x: number = a1.value;
-  let y: number = a2.value;
-  let text: string = a3.value;
-  let color: string = a4.value;
-  let fontSize: number = a5.value;
-  let fontFamily: string = a6.value;
+  const a1 = document.getElementById("newx") as HTMLInputElement;
+  const a2 = document.getElementById("newy") as HTMLInputElement;
+  const a3 = document.getElementById("text") as HTMLInputElement;
+  const a4 = document.getElementById("color") as HTMLInputElement;
+  const a5 = document.getElementById("fontSize") as HTMLInputElement;
+  const a6 = document.getElementById("fontFamily") as HTMLInputElement;
+  const x: number = Number(a1.value);
+  const y: number = Number(a2.value);
+  const text: string = a3.value;
+  const color: string = a4.value;
+  const fontSize: number = Number(a5.value);
+  const fontFamily: string = a6.value;
   console.log("x");
   texted({ x, y, text, canvas, context, color, fontSize, fontFamily });
   console.log("z");
