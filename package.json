@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "build": "bunx --bun tsup",
-    "watch": "bunx --bun tsup --watch"
+    "watch": "bunx --bun tsup --watch",
+    "lint":"bunx eslint"
   },
   "type": "module",
   "devDependencies": {
